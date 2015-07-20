@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		533A5117C09E47AC3384D520 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEA5BED0C8B60F27EE5CEAF /* libPods.a */; };
+		61BDE8581B5D49CB00BAB0C5 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE8571B5D49CB00BAB0C5 /* Utils.m */; };
+		61BDE85B1B5D518F00BAB0C5 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE85A1B5D518F00BAB0C5 /* Preferences.m */; };
+		61BDE85F1B5D545D00BAB0C5 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE85D1B5D545D00BAB0C5 /* HomeViewController.m */; };
+		61BDE8601B5D545D00BAB0C5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BDE85E1B5D545D00BAB0C5 /* HomeViewController.xib */; };
+		61BDE8671B5D7FC900BAB0C5 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE8651B5D7FC900BAB0C5 /* MenuView.m */; };
+		61BDE86C1B5D7FE200BAB0C5 /* ReservacionesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE86A1B5D7FE200BAB0C5 /* ReservacionesView.m */; };
+		61BDE86D1B5D7FE200BAB0C5 /* ReservacionesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BDE86B1B5D7FE200BAB0C5 /* ReservacionesView.xib */; };
+		61BDE8711B5D801700BAB0C5 /* UbicacionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE86F1B5D801700BAB0C5 /* UbicacionView.m */; };
+		61BDE8721B5D801700BAB0C5 /* UbicacionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BDE8701B5D801700BAB0C5 /* UbicacionView.xib */; };
+		61BDE8761B5D802E00BAB0C5 /* CreditosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BDE8741B5D802E00BAB0C5 /* CreditosView.m */; };
+		61BDE8771B5D802E00BAB0C5 /* CreditosView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BDE8751B5D802E00BAB0C5 /* CreditosView.xib */; };
+		61BDE8791B5D8F4100BAB0C5 /* MenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61BDE8781B5D8F4100BAB0C5 /* MenuView.xib */; };
 		61D38C481B59ECE80009933F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D38C471B59ECE80009933F /* main.m */; };
 		61D38C4B1B59ECE80009933F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D38C4A1B59ECE80009933F /* AppDelegate.m */; };
 		61D38C4E1B59ECE80009933F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D38C4D1B59ECE80009933F /* ViewController.m */; };
@@ -14,6 +27,8 @@
 		61D38C531B59ECE80009933F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61D38C521B59ECE80009933F /* Images.xcassets */; };
 		61D38C561B59ECE80009933F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61D38C541B59ECE80009933F /* LaunchScreen.xib */; };
 		61D38C621B59ECE80009933F /* RestauranteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D38C611B59ECE80009933F /* RestauranteTests.m */; };
+		61D38C6C1B59ED050009933F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D38C6B1B59ED050009933F /* MapKit.framework */; };
+		61D38C731B5D34FE0009933F /* ConnectWS.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D38C721B5D34FE0009933F /* ConnectWS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +42,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B6AFE7C4B4101AC5B775281 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../../../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		61BDE8561B5D49CB00BAB0C5 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		61BDE8571B5D49CB00BAB0C5 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		61BDE8591B5D518F00BAB0C5 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
+		61BDE85A1B5D518F00BAB0C5 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
+		61BDE85C1B5D545D00BAB0C5 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		61BDE85D1B5D545D00BAB0C5 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		61BDE85E1B5D545D00BAB0C5 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		61BDE8641B5D7FC900BAB0C5 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		61BDE8651B5D7FC900BAB0C5 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		61BDE8691B5D7FE200BAB0C5 /* ReservacionesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservacionesView.h; sourceTree = "<group>"; };
+		61BDE86A1B5D7FE200BAB0C5 /* ReservacionesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservacionesView.m; sourceTree = "<group>"; };
+		61BDE86B1B5D7FE200BAB0C5 /* ReservacionesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReservacionesView.xib; sourceTree = "<group>"; };
+		61BDE86E1B5D801700BAB0C5 /* UbicacionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UbicacionView.h; sourceTree = "<group>"; };
+		61BDE86F1B5D801700BAB0C5 /* UbicacionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UbicacionView.m; sourceTree = "<group>"; };
+		61BDE8701B5D801700BAB0C5 /* UbicacionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UbicacionView.xib; sourceTree = "<group>"; };
+		61BDE8731B5D802E00BAB0C5 /* CreditosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditosView.h; sourceTree = "<group>"; };
+		61BDE8741B5D802E00BAB0C5 /* CreditosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditosView.m; sourceTree = "<group>"; };
+		61BDE8751B5D802E00BAB0C5 /* CreditosView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditosView.xib; sourceTree = "<group>"; };
+		61BDE8781B5D8F4100BAB0C5 /* MenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView.xib; sourceTree = "<group>"; };
 		61D38C421B59ECE80009933F /* Restaurante.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurante.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D38C461B59ECE80009933F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61D38C471B59ECE80009933F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +75,11 @@
 		61D38C5B1B59ECE80009933F /* RestauranteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestauranteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D38C601B59ECE80009933F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61D38C611B59ECE80009933F /* RestauranteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RestauranteTests.m; sourceTree = "<group>"; };
+		61D38C6B1B59ED050009933F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		61D38C711B5D34FE0009933F /* ConnectWS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectWS.h; sourceTree = "<group>"; };
+		61D38C721B5D34FE0009933F /* ConnectWS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectWS.m; sourceTree = "<group>"; };
+		C3D96D270DCE761EF67939AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../../../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EDEA5BED0C8B60F27EE5CEAF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61D38C6C1B59ED050009933F /* MapKit.framework in Frameworks */,
+				533A5117C09E47AC3384D520 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +105,12 @@
 		61D38C391B59ECE80009933F = {
 			isa = PBXGroup;
 			children = (
+				61D38C6B1B59ED050009933F /* MapKit.framework */,
 				61D38C441B59ECE80009933F /* Restaurante */,
 				61D38C5E1B59ECE80009933F /* RestauranteTests */,
 				61D38C431B59ECE80009933F /* Products */,
+				F6F7DC06CE8D1260B29C991A /* Pods */,
+				F9F48580DA38085AD605EFEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,13 +126,13 @@
 		61D38C441B59ECE80009933F /* Restaurante */ = {
 			isa = PBXGroup;
 			children = (
+				61D38C701B5D34550009933F /* API */,
+				61D38C6F1B59ED2D0009933F /* Controlador */,
+				61D38C6E1B59ED1D0009933F /* Vista */,
+				61D38C6D1B59ED140009933F /* Modelo */,
 				61D38C491B59ECE80009933F /* AppDelegate.h */,
 				61D38C4A1B59ECE80009933F /* AppDelegate.m */,
-				61D38C4C1B59ECE80009933F /* ViewController.h */,
-				61D38C4D1B59ECE80009933F /* ViewController.m */,
-				61D38C4F1B59ECE80009933F /* Main.storyboard */,
 				61D38C521B59ECE80009933F /* Images.xcassets */,
-				61D38C541B59ECE80009933F /* LaunchScreen.xib */,
 				61D38C451B59ECE80009933F /* Supporting Files */,
 			);
 			path = Restaurante;
@@ -119,6 +164,76 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		61D38C6D1B59ED140009933F /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modelo;
+			sourceTree = "<group>";
+		};
+		61D38C6E1B59ED1D0009933F /* Vista */ = {
+			isa = PBXGroup;
+			children = (
+				61BDE85E1B5D545D00BAB0C5 /* HomeViewController.xib */,
+				61D38C541B59ECE80009933F /* LaunchScreen.xib */,
+				61D38C4F1B59ECE80009933F /* Main.storyboard */,
+				61BDE86B1B5D7FE200BAB0C5 /* ReservacionesView.xib */,
+				61BDE8701B5D801700BAB0C5 /* UbicacionView.xib */,
+				61BDE8751B5D802E00BAB0C5 /* CreditosView.xib */,
+				61BDE8781B5D8F4100BAB0C5 /* MenuView.xib */,
+			);
+			name = Vista;
+			sourceTree = "<group>";
+		};
+		61D38C6F1B59ED2D0009933F /* Controlador */ = {
+			isa = PBXGroup;
+			children = (
+				61BDE8731B5D802E00BAB0C5 /* CreditosView.h */,
+				61BDE8741B5D802E00BAB0C5 /* CreditosView.m */,
+				61BDE86E1B5D801700BAB0C5 /* UbicacionView.h */,
+				61BDE86F1B5D801700BAB0C5 /* UbicacionView.m */,
+				61BDE8641B5D7FC900BAB0C5 /* MenuView.h */,
+				61BDE8651B5D7FC900BAB0C5 /* MenuView.m */,
+				61BDE8691B5D7FE200BAB0C5 /* ReservacionesView.h */,
+				61BDE86A1B5D7FE200BAB0C5 /* ReservacionesView.m */,
+				61BDE85C1B5D545D00BAB0C5 /* HomeViewController.h */,
+				61BDE85D1B5D545D00BAB0C5 /* HomeViewController.m */,
+				61D38C4C1B59ECE80009933F /* ViewController.h */,
+				61D38C4D1B59ECE80009933F /* ViewController.m */,
+			);
+			name = Controlador;
+			sourceTree = "<group>";
+		};
+		61D38C701B5D34550009933F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				61D38C711B5D34FE0009933F /* ConnectWS.h */,
+				61D38C721B5D34FE0009933F /* ConnectWS.m */,
+				61BDE8561B5D49CB00BAB0C5 /* Utils.h */,
+				61BDE8571B5D49CB00BAB0C5 /* Utils.m */,
+				61BDE8591B5D518F00BAB0C5 /* Preferences.h */,
+				61BDE85A1B5D518F00BAB0C5 /* Preferences.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		F6F7DC06CE8D1260B29C991A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3D96D270DCE761EF67939AA /* Pods.debug.xcconfig */,
+				4B6AFE7C4B4101AC5B775281 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F9F48580DA38085AD605EFEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDEA5BED0C8B60F27EE5CEAF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61D38C651B59ECE80009933F /* Build configuration list for PBXNativeTarget "Restaurante" */;
 			buildPhases = (
+				C74BC420B6DA8DACFC5D7BCE /* Check Pods Manifest.lock */,
 				61D38C3E1B59ECE80009933F /* Sources */,
 				61D38C3F1B59ECE80009933F /* Frameworks */,
 				61D38C401B59ECE80009933F /* Resources */,
+				D20749E5E645EFFD71E83E87 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,8 +317,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				61D38C511B59ECE80009933F /* Main.storyboard in Resources */,
+				61BDE8771B5D802E00BAB0C5 /* CreditosView.xib in Resources */,
 				61D38C561B59ECE80009933F /* LaunchScreen.xib in Resources */,
+				61BDE8721B5D801700BAB0C5 /* UbicacionView.xib in Resources */,
+				61BDE86D1B5D7FE200BAB0C5 /* ReservacionesView.xib in Resources */,
+				61BDE8791B5D8F4100BAB0C5 /* MenuView.xib in Resources */,
 				61D38C531B59ECE80009933F /* Images.xcassets in Resources */,
+				61BDE8601B5D545D00BAB0C5 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,13 +336,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C74BC420B6DA8DACFC5D7BCE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D20749E5E645EFFD71E83E87 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		61D38C3E1B59ECE80009933F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61BDE86C1B5D7FE200BAB0C5 /* ReservacionesView.m in Sources */,
 				61D38C4E1B59ECE80009933F /* ViewController.m in Sources */,
+				61BDE8711B5D801700BAB0C5 /* UbicacionView.m in Sources */,
 				61D38C4B1B59ECE80009933F /* AppDelegate.m in Sources */,
+				61BDE85B1B5D518F00BAB0C5 /* Preferences.m in Sources */,
+				61D38C731B5D34FE0009933F /* ConnectWS.m in Sources */,
+				61BDE8761B5D802E00BAB0C5 /* CreditosView.m in Sources */,
+				61BDE8581B5D49CB00BAB0C5 /* Utils.m in Sources */,
+				61BDE8671B5D7FC900BAB0C5 /* MenuView.m in Sources */,
+				61BDE85F1B5D545D00BAB0C5 /* HomeViewController.m in Sources */,
 				61D38C481B59ECE80009933F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,9 +508,11 @@
 		};
 		61D38C661B59ECE80009933F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D96D270DCE761EF67939AA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Restaurante/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,9 +520,11 @@
 		};
 		61D38C671B59ECE80009933F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B6AFE7C4B4101AC5B775281 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Restaurante/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +583,7 @@
 				61D38C671B59ECE80009933F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61D38C681B59ECE80009933F /* Build configuration list for PBXNativeTarget "RestauranteTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +592,7 @@
 				61D38C6A1B59ECE80009933F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
