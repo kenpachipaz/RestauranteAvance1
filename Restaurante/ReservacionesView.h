@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReservacionesView : UIViewController
+@interface ReservacionesView : UIViewController 
+@property (nonatomic, strong) NSArray *objects;
+@property (weak, nonatomic) IBOutlet UITableView *reservaciones;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

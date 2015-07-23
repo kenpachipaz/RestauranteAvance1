@@ -7,7 +7,12 @@
 //
 
 #import "UbicacionView.h"
+#import "Maker.h"
 
+CGFloat const kLatitude= 19.043823;
+CGFloat const kLongitude= -98.196959;
+NSString *const kTitleMap=@"Restaurante Casa de Los Muñecos";
+NSString *const kSubtitleMap=@"Alta Cocina Mexicana";
 
 @interface UbicacionView ()
 
@@ -18,28 +23,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CLLocationCoordinate2D initialLocation;
-    
-    initialLocation.latitude=19.043823;
-    initialLocation.longitude=-98.196959;
-    MKCoordinateRegion restaurante = MKCoordinateRegionMakeWithDistance(initialLocation, 100, 100);
-    [self.mapView setRegion:restaurante animated:YES];
-    // Do any additional setup after loading the view from its nib.
+    [self setMap];    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setMap{
+    CLLocationCoordinate2D initialLocation;
+    initialLocation.latitude = kLatitude;
+    initialLocation.longitude= kLongitude;
+    
+    MKCoordinateRegion restaurante = MKCoordinateRegionMakeWithDistance(initialLocation, 100, 100);
+    [self.mapView setRegion:restaurante animated:YES];
+    
+    CLLocationCoordinate2D newCoord = {kLatitude, kLongitude};
+    Maker *annotation = [[Maker alloc]initWithTitle:kTitleMap
+                                           subtitle:kSubtitleMap
+                                      andCoordinate:newCoord];
+    [self.mapView addAnnotation:annotation];
 }
-*/
-
 @end

@@ -12,13 +12,16 @@
 #import "Preferences.h"
 #import "HomeViewController.h"
 #import <AFNetworking.h>
-#import "CreditosView.h"
 
 
 NSString *const kResponse=@"Usuario y/o Password incorrectos";
-NSString *const kKeyIdentifier=@"us.gonet.preferences.name";
+NSString *const kKeyIdentifierName=@"us.gonet.preferences.name";
+NSString *const kKeyIdentifierUser=@"us.gonet.preferences.user";
 NSString *const kNameDictionary=@"nombre";
 NSString *const kErrorKnown=@"Revise si tiene acceso a Internet";
+NSString *const kIdentifierSegueLogin=@"validateLogin";
+
+
 @interface ViewController ()
 
 @end
@@ -27,35 +30,46 @@ NSString *const kErrorKnown=@"Revise si tiene acceso a Internet";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tfPassword.secureTextEntry = YES;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    if ([identifier isEqualToString:kIdentifierSegueLogin]) {
+        return [self responseMenu:self.tfUsuario.text password:self.tfPassword.text];
+    }
+    return  NO;
+}
 - (IBAction)login:(id)sender {
-    __block NSString *name;
     
-    NSString *path= [Utils getValidateUrl:self.tfUsuario.text password:self.tfPassword.text];
-    [[ConnectWS sharedInstance]getDataFromWebServices:path blockResponse:^(id response){
-        if ([response isKindOfClass:[NSArray class]]) {
-                NSDictionary *dictionary= [response objectAtIndex:0];
-                name=dictionary[kNameDictionary];
-            
-                [[Preferences sharedInstance]setData:kKeyIdentifier value:name];
-                [self dismissViewControllerAnimated:YES completion:nil];
-                HomeViewController *homeViewController=[[HomeViewController alloc]init];
-                //[self.navigationController pushViewController:homeViewController animated:YES];
-                [self presentViewController:homeViewController animated:YES completion:NULL];
-            
-        }else if([response isKindOfClass:[NSDictionary class]]){
-                name=response[kNameDictionary];
-                [Utils showAlertMessage:name];
-        }else{
-                [Utils showAlertMessage:kErrorKnown];
-        }
-    }];
+    
+}
+
+- (BOOL)responseMenu:(NSString *)user password:(NSString *)password{
+    NSString *name;
+    NSString *path= [Utils getValidateUrl:user password:password];
+    id array= [[ConnectWS sharedInstance] getDataFromWebServices:path];
+    if ([array isKindOfClass:[NSArray class]]) {
+            NSDictionary *dictionary= [array objectAtIndex:0];
+            name=dictionary[kNameDictionary];
+        
+            [[Preferences sharedInstance]setData:kKeyIdentifierName value:name];
+            [[Preferences sharedInstance]setData:kKeyIdentifierUser value:user];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        return YES;
+      }else if([array isKindOfClass:[NSDictionary class]]){
+           name=array[kNameDictionary];
+           [Utils showAlertMessage:name];
+          return NO;
+      }else{
+            [Utils showAlertMessage:kErrorKnown];
+          return NO;
+      }
+    return NO;
 }
 
 @end

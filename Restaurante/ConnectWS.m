@@ -8,6 +8,7 @@
 
 #import "ConnectWS.h"
 #import <AFNetworking.h>
+#import "ViewController.h"
 
 NSString *const kCode=@"text/html";
 NSString *const kError=@"Error: %@";
@@ -23,17 +24,18 @@ NSString *const kError=@"Error: %@";
     return _sharedInstance;
 }
 
-- (void) getDataFromWebServices:(NSString *)pathUrl blockResponse:(void(^)(id response))handler{
+- (id) getDataFromWebServices:(NSString *)pathUrl{
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:kCode];
-    [manager GET:pathUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
-        handler(responseObject);
+    AFHTTPRequestOperation *operation=[manager GET:pathUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject){
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(kError, error);
     }];
-    
+    [operation start];
+    [operation waitUntilFinished];
+    return [operation responseObject];
 }
-
 
 @end

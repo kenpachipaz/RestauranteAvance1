@@ -11,9 +11,7 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *tfUsuario;
-
 @property (weak, nonatomic) IBOutlet UITextField *tfPassword;
-
 
 @end
 

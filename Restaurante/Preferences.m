@@ -11,13 +11,8 @@
 @implementation Preferences
 
 + (Preferences *)sharedInstance{
-    // 1
     static Preferences *_sharedInstance = nil;
-    
-    // 2
     static dispatch_once_t oncePredicate;
-    
-    // 3
     dispatch_once(&oncePredicate, ^{
         _sharedInstance = [[Preferences alloc] init];
     });

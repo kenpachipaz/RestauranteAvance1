@@ -10,6 +10,5 @@
 
 @interface HomeViewController : UIViewController
 
-- (IBAction)viewCredits:(id)sender;
 
 @end

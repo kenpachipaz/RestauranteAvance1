@@ -12,9 +12,11 @@
 
 + (NSString *) getValidateUrl:(NSString *)user password:(NSString *)password;
 + (NSString *) getMenuUrl:(NSString *)section;
-+ (NSString *) getReservacionesUrl:(NSString *)user;
++ (NSString *) getReservacionesUrl:(NSString *)user mesa:(NSString *)mesa fecha:(NSString *)fecha;
 + (NSString *) getStatusMesasUrl:(NSString *)fecha;
 + (NSString *) getDeleteUrl:(NSString *)id_mesa;
 + (NSString *) getMyReservationsUrl:(NSString *)user;
 + (void) showAlertMessage:(NSString *)msg;
++(NSArray *)getMenuArray:(NSString *)Url;
++(NSArray *)getReservacionesArray:(NSString *)Url;
 @end

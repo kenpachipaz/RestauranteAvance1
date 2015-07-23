@@ -10,8 +10,8 @@
 
 @interface ConnectWS : NSObject
 
-@property (nonatomic, strong)NSArray *response;
 
 + (ConnectWS *)sharedInstance;
-- (void) getDataFromWebServices:(NSString *)pathUrl blockResponse:(void (^) (id response))handler;
+- (id) getDataFromWebServices:(NSString *)pathUrl;
+
 @end

@@ -8,6 +8,9 @@
 
 #import "Utils.h"
 #import <UIKit/UIKit.h>
+#import "ConnectWS.h"
+#import "MenuItem.h"
+#import "Reservaciones.h"
 
 NSString *const kUrlBase=@"http://takephotos.hol.es/WebCamPicture/API/";
 
@@ -19,6 +22,8 @@ NSString *const kApiMenu=@"get_menu.php?";
 NSString *const kSection=@"seccion=";
 
 NSString *const kApiReservation=@"reservation_table.php?";
+NSString *const kMesa=@"&mesa=";
+NSString *const kFechaR=@"&fecha=";
 
 NSString *const kApiStatus=@"status_table.php?";
 NSString *const kFecha=@"fecha=";
@@ -42,8 +47,8 @@ NSString *const kAcepter=@"Aceptar";
     return [kUrlBase stringByAppendingFormat:@"%@%@%@",kApiMenu, kSection, section];
 }
 
-+ (NSString *) getReservacionesUrl:(NSString *)user{
-    return [kUrlBase stringByAppendingFormat:@"%@%@%@",kApiReservation, kUser, user];
++ (NSString *) getReservacionesUrl:(NSString *)user mesa:(NSString *)mesa fecha:(NSString *)fecha{
+    return [kUrlBase stringByAppendingFormat:@"%@%@%@%@%@%@%@",kApiReservation, kUser, user,kMesa,mesa,kFechaR,fecha];
 }
 
 + (NSString *) getStatusMesasUrl:(NSString *)fecha{
@@ -67,5 +72,36 @@ NSString *const kAcepter=@"Aceptar";
                          cancelButtonTitle:kAcepter otherButtonTitles:nil];
     
     [alert show];
+}
+
++ (NSArray *)getMenuArray:(NSString *)Url{
+    NSMutableArray *menuMutable = [[NSMutableArray alloc]init];
+    NSArray *menu =[[ConnectWS sharedInstance]getDataFromWebServices:Url];
+         for (int i=0; i< menu.count; i++) {
+             NSDictionary *menuDictionary = [menu objectAtIndex:i];
+             MenuItem *menuItem = [[MenuItem alloc]initWithTitle:menuDictionary[@"nombre"] precio:menuDictionary[@"precio"] imagenUrl:menuDictionary[@"imagen"]];
+        [menuMutable addObject:menuItem];
+    }
+    return menuMutable;
+}
+
++ (id)getReservacionesArray:(NSString *)Url{
+    id data =[[ConnectWS sharedInstance]getDataFromWebServices:Url];
+    
+    if([data isKindOfClass:[NSArray class]]){
+        NSMutableArray *menuMutable = [[NSMutableArray alloc]init];
+        NSArray *menu=data;
+        for (int i=0; i< menu.count; i++) {
+        
+            NSDictionary *reservacionesDictionary = [menu objectAtIndex:i];
+            
+            Reservaciones *reservacionesItem = [[Reservaciones alloc]initWithTitle:reservacionesDictionary[@"id"] mesa:reservacionesDictionary[@"mesa"] usuario:reservacionesDictionary[@"usuario"] fecha:reservacionesDictionary[@"fecha"]];
+        
+            [menuMutable addObject:reservacionesItem];
+        }
+        return menuMutable;
+    }else{
+        return data[@"msg"];
+    }
 }
 @end
